@@ -76,6 +76,9 @@
   /* ===== HERO (rediseñado: sky card + arco 3D de tarjetas) ===== */
   .hero { padding: 8px; background: transparent; }
   .hero, .hero * { font-family: 'Poppins', system-ui, sans-serif; }
+  .hero-links a, .hero-navbtn, .hero-cta a, .hero-rating .rtext {
+    font-family: 'DM Mono', ui-monospace, 'SFMono-Regular', monospace;
+  }
 
   .hero-card {
     position: relative; width: 100%; min-height: 90vh; border-radius: 24px; overflow: hidden;
@@ -150,6 +153,10 @@
   .hero-rating { margin-top: 26px; text-align: center; }
   .hero-rating .rtext { font-size: 12px; letter-spacing: .05em; color: rgba(255,255,255,.9); }
   .hero-rating .stars { margin-top: 6px; color: #D9F75C; font-size: 15px; letter-spacing: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .c-card { animation: none; }
+  }
 
   /* grid pattern for reference sections */
   .bg-grid-pattern {

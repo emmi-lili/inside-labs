@@ -73,71 +73,23 @@
   }
   a { text-decoration: none; color: inherit; }
 
-  /* ===== HERO — se mantiene exactamente igual (Poppins + verde #1DB81D) ===== */
+  /* ===== HERO (rediseñado: sky card + arco 3D de tarjetas) ===== */
+  .hero { padding: 8px; background: transparent; }
   .hero, .hero * { font-family: 'Poppins', system-ui, sans-serif; }
-  .hero { color: var(--ink); }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-  .accent { color: var(--accent); }
 
-  .hero .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    font-weight: 500; font-size: 15px; cursor: pointer; border: none; border-radius: 100px;
-    padding: 14px 28px; transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  .hero-card {
+    position: relative; width: 100%; min-height: 90vh; border-radius: 24px; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 20px clamp(16px, 4vw, 40px) 40px; color: #fff;
+    /* Fondo: overlay + foto de cielo (image.png) + degradado de fallback */
+    background-image:
+      linear-gradient(180deg, rgba(18,96,196,.45) 0%, rgba(90,174,242,.10) 55%, rgba(90,174,242,0) 78%),
+      url('public/reference/image.png'),
+      linear-gradient(180deg, #1A7FE0 0%, #5AAEF2 100%);
+    background-size: cover, cover, cover;
+    background-position: center, center bottom, center;
+    background-repeat: no-repeat;
   }
-  .hero .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 22px rgba(29,184,29,.28); }
-  .hero .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 14px 30px rgba(29,184,29,.34); }
-  .hero .btn-ghost { background: transparent; color: var(--accent); padding-left: 10px; padding-right: 10px; }
-  .hero .btn-ghost:hover { color: var(--accent-dark); transform: translateY(-1px); }
-
-  .hero {
-    position: relative; padding: 48px 0 40px;
-    background: linear-gradient(180deg, #fff 0%, #fff 55%, #f6f7f6 100%);
-    overflow: hidden;
-  }
-  .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; min-height: 520px; }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500;
-    color: var(--accent-dark); background: var(--accent-soft); padding: 7px 14px; border-radius: 100px; margin-bottom: 26px;
-  }
-  .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
-  .hero h1 { font-size: clamp(44px, 6.5vw, 76px); font-weight: 600; letter-spacing: -.03em; line-height: 1.12; }
-  .hero .sub { margin: 24px 0 0; max-width: 440px; font-size: 18px; color: var(--ink-60); line-height: 1.6; }
-  .hero-actions { margin-top: 34px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-
-  .hero-visual { position: relative; height: 480px; }
-  .arrow-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; z-index: 1; pointer-events: none; }
-  .avatar {
-    position: absolute; border-radius: 26px; object-fit: cover; z-index: 2;
-    box-shadow: var(--shadow-md); border: 4px solid #fff; background: #eee;
-    animation: floaty 7s ease-in-out infinite;
-  }
-  .a1 { width: 92px; height: 92px; top: 6px; left: 30px; animation-delay: 0s; }
-  .a2 { width: 104px; height: 104px; top: 0; right: 40px; animation-delay: .6s; }
-  .a3 { width: 82px; height: 82px; top: 165px; right: -6px; animation-delay: 1.2s; }
-  .a4 { width: 96px; height: 96px; bottom: 30px; right: 90px; animation-delay: .9s; }
-  .a5 { width: 78px; height: 78px; bottom: 6px; left: 44px; animation-delay: 1.5s; }
-  @keyframes floaty { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-12px);} }
-
-  .card-group { position: absolute; left: 50%; top: 52%; transform: translate(-50%,-50%); z-index: 3; }
-  .v-tab { position: absolute; left: -58px; top: 24px; width: 46px; height: 160px; background: #111; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); }
-  .v-tab span { writing-mode: vertical-rl; transform: rotate(180deg); color: #fff; font-size: 13px; font-weight: 500; letter-spacing: .04em; }
-  .metric-card { width: 230px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px; box-shadow: var(--shadow-lg); transform: rotate(-3deg); animation: floaty 6.5s ease-in-out infinite; }
-  .mc-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
-  .mc-tag { font-size: 11px; font-weight: 600; color: var(--ink-40); display: flex; align-items: center; gap: 6px; }
-  .mc-tag i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }
-  .mc-chart { margin: 8px 0; display: block; }
-  .mc-value { font-size: 34px; font-weight: 700; letter-spacing: -.03em; line-height: 1; }
-  .mc-value small { font-size: 14px; font-weight: 600; color: var(--accent-dark); }
-  .report-card { position: absolute; right: -54px; bottom: -34px; width: 118px; background: var(--accent); color: #fff; border-radius: 16px; padding: 14px 16px; box-shadow: 0 16px 30px rgba(29,184,29,.4); transform: rotate(5deg); animation: floaty 7.5s ease-in-out infinite .4s; }
-  .report-card .rc-top { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; opacity: .95; }
-  .report-card .rc-big { font-size: 22px; font-weight: 700; margin-top: 6px; }
-  .pill-insights { position: absolute; left: -30px; bottom: 20px; z-index: 4; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-md); border-radius: 100px; padding: 9px 8px 9px 16px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; animation: floaty 6s ease-in-out infinite 1s; }
-  .pill-insights .toggle { width: 34px; height: 20px; border-radius: 100px; background: var(--accent); position: relative; }
-  .pill-insights .toggle::after { content:''; position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #fff; top: 3px; right: 3px; }
-  .scroll-ind { position: absolute; right: 30px; bottom: 24px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .12em; color: var(--ink-40); z-index: 6; }
-  .scroll-ind .line { width: 1px; height: 34px; background: var(--ink-40); position: relative; overflow: hidden; }
-  .scroll-ind .line::after { content:''; position: absolute; top: -10px; left: 0; width: 100%; height: 10px; background: var(--accent); animation: scrolldrop 1.8s ease-in-out infinite; }
-  @keyframes scrolldrop { 0%{ transform: translateY(0);} 100%{ transform: translateY(44px);} }
 
   /* grid pattern for reference sections */
   .bg-grid-pattern {

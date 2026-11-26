@@ -1,0 +1,48 @@
+Quiero rediseñar ÚNICAMENTE la sección hero de este proyecto (Node.js). No modifiques ninguna otra sección, ruta, lógica ni estilo global fuera del hero.
+
+PASO 1 — Antes de escribir código:
+Revisa el proyecto e identifica: qué usa para el front (EJS/HTML, React, Next.js, etc.), cómo maneja estilos (CSS, Tailwind, módulos), dónde vive el hero actual y qué fuentes ya están cargadas. Dime en 3-4 líneas qué encontraste y qué archivos vas a tocar. Usa el sistema de estilos que ya existe en el proyecto, no agregues uno nuevo.
+
+PASO 2 — Contenido:
+Conserva el texto actual del hero (título, subtítulo, botones y sus links). Solo cambia el diseño. Si falta algún elemento (por ejemplo, la línea de rating), déjalo con un placeholder fácil de editar.
+
+PASO 3 — Diseño del nuevo hero (te adjunto la referencia visual):
+
+Contenedor
+- Bloque con bordes redondeados (~24px), separado ~8px de los bordes de la ventana, ancho completo, alto mínimo ~90vh.
+- Fondo: degradado de cielo azul intenso (aprox. #1A7FE0 arriba → #5AAEF2 abajo) con una foto de nubes blancas tipo cúmulo ocupando la mitad inferior. Usa /public/hero-sky.jpg (yo la agrego); mientras tanto, deja el degradado como fallback.
+
+Navegación (dentro del contenedor, arriba)
+- Logo actual en blanco a la izquierda.
+- Links centrados en blanco, MAYÚSCULAS, fuente monoespaciada, ~12px, letter-spacing amplio.
+- Botón a la derecha: pill color lima (#D9F75C) con texto oscuro monoespaciado en mayúsculas.
+- Reutiliza los links y el logo que ya existen en la nav actual.
+
+Texto central (centrado)
+- Título en dos líneas, ~72px desktop / ~40px mobile, peso medio (500), letter-spacing -0.03em, line-height 1.05. Primera línea blanca; segunda línea blanca al 70% de opacidad.
+- Subtítulo blanco al 85%, ~16px, ancho máximo ~480px.
+- Dos botones tipo pill, uno al lado del otro:
+  · Secundario: fondo azul marino translúcido (rgba(10,40,90,.45)), texto blanco monoespaciado en mayúsculas.
+  · Primario: fondo lima #D9F75C, texto oscuro en mayúsculas y, a la derecha dentro del botón, un círculo negro con una flecha ↗ blanca.
+
+Carrusel 3D de tarjetas (debajo de los botones)
+- Fila de 7 a 9 tarjetas tipo UI flotando en un arco curvo, como la cara de un cilindro visto de frente: perspective en el contenedor; cada tarjeta con rotateY progresivo (0° al centro hasta ±40° en los extremos), escala menor y ligero desplazamiento en Z hacia los bordes.
+- Mezcla de tarjetas: mini-dashboards blancos con gráficos, una foto de persona, una tarjeta negra con texto, una tarjeta de vidrio azul (backdrop-filter: blur) con un ícono "+", tarjetas con métricas grandes (por ejemplo "520k+"). Usa contenido placeholder en HTML/CSS; no necesitas imágenes reales salvo la foto, que puede ser un placeholder.
+- Bordes redondeados (~14px) y sombras suaves.
+- Animación sutil: flotación vertical lenta y desfasada por tarjeta. Desactívala con prefers-reduced-motion.
+- Hazlo solo con CSS/transforms. NO instales three.js ni librerías pesadas.
+
+Rating (al final del hero)
+- Texto pequeño blanco: "Rated 4.9/5 by 4,900+ clients" (placeholder) y debajo 5 estrellas en lima.
+
+Tipografía
+- Si el proyecto ya tiene una sans geométrica y una monoespaciada, úsalas. Si no, usa Inter (o Manrope) para títulos/cuerpo y DM Mono para nav y botones, cargadas desde Google Fonts.
+
+Responsive
+- Tablet: 5 tarjetas en el arco.
+- Mobile: título ~40px, botones apilados a lo ancho, y el carrusel pasa a 3 tarjetas o a un scroll horizontal con scroll-snap. La nav colapsa a un menú hamburguesa si el proyecto ya tiene uno; si no, oculta los links y deja logo + botón.
+
+PASO 4 — Cierre:
+- Verifica que el proyecto compile/arranque sin errores.
+- Dame la lista de archivos modificados y un resumen corto de los cambios.
+- No hagas commit.

@@ -192,3 +192,27 @@ const footer = `
 // ---------- RENDER ----------
 document.getElementById('app').innerHTML =
   navbar + hero + logos + benefits + steps + results + ctaFinal + footer;
+
+// ---------- INTERACTIVIDAD ----------
+(function initMenu() {
+  const burger = document.querySelector('.burger');
+  const links = document.querySelector('.nav-links');
+  if (!burger || !links) return;
+
+  burger.addEventListener('click', () => {
+    const open = links.style.display === 'flex';
+    if (open) { links.style.display = ''; return; }
+    Object.assign(links.style, {
+      display: 'flex', position: 'absolute', flexDirection: 'column',
+      top: '64px', left: '24px', right: '24px', background: '#fff',
+      padding: '16px 20px', borderRadius: '14px',
+      boxShadow: 'var(--shadow-md)', gap: '16px',
+    });
+  });
+
+  links.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 900) links.style.display = '';
+    })
+  );
+})();

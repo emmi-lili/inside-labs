@@ -48,6 +48,16 @@ const navbar = `
 const hero = `
   <header class="hero" id="inicio">
     <div class="hero-card">
+      <nav class="hero-nav">
+        <a class="hero-logo" href="#inicio"><span class="mark">D</span>DigitalLab</a>
+        <div class="hero-links">
+          <a href="#comparativa">Paradigma</a>
+          <a href="#squad">Agentes</a>
+          <a href="#playground">Playground</a>
+          <a href="#resultados">Resultados</a>
+        </div>
+        <a class="hero-navbtn" href="#playground">Activar Agente Demo</a>
+      </nav>
     </div>
   </header>`;
 

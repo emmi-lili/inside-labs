@@ -343,8 +343,9 @@ const footer = `
   </footer>`;
 
 // ---------- RENDER ----------
+// Nota: la navbar global se omite porque el nuevo hero incluye su propia nav interna.
 document.getElementById('app').innerHTML =
-  navbar + hero + logos + paradigm + marketplace + squad + playground + metrics + ctaFinal + footer;
+  hero + logos + paradigm + marketplace + squad + playground + metrics + ctaFinal + footer;
 
 // ---------- PLAYGROUND INTERACTIVO ----------
 (function initPlayground() {

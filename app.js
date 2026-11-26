@@ -58,6 +58,15 @@ const hero = `
         </div>
         <a class="hero-navbtn" href="#playground">Activar Agente Demo</a>
       </nav>
+
+      <div class="hero-center">
+        <h1 class="hero-title">Conoce a tus<br><span class="l2">Clientes</span></h1>
+        <p class="hero-sub">Creamos tu página web y un agente de IA que conversa con cada visitante, entiende qué busca y lo acompaña hasta la venta.</p>
+        <div class="hero-cta">
+          <a class="hero-cta-sec" href="#comparativa">Ver cómo funciona</a>
+          <a class="hero-cta-pri" href="#playground">Agenda una reunión <span class="arrow">↗</span></a>
+        </div>
+      </div>
     </div>
   </header>`;
 

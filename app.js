@@ -80,6 +80,12 @@ const hero = `
       </div>
 
       <div class="hero-carousel">${heroArc}</div>
+
+      <div class="hero-rating">
+        <!-- PLACEHOLDER rating: edita texto y nº de estrellas aquí -->
+        <div class="rtext">Rated 4.9/5 by 4,900+ clients</div>
+        <div class="stars">★★★★★</div>
+      </div>
     </div>
   </header>`;
 

@@ -4,14 +4,25 @@
    Resto: sistema "Autonomous Kinetic Green" (Tailwind).
    ============================================================ */
 
-// Avatares de clientes (fotos de ejemplo) — HERO
-const avatars = [
-  { cls: 'a1', img: 'https://i.pravatar.cc/200?img=12' },
-  { cls: 'a2', img: 'https://i.pravatar.cc/200?img=32' },
-  { cls: 'a3', img: 'https://i.pravatar.cc/200?img=5'  },
-  { cls: 'a4', img: 'https://i.pravatar.cc/200?img=47' },
-  { cls: 'a5', img: 'https://i.pravatar.cc/200?img=15' },
+// Tarjetas del arco 3D del HERO (placeholders en HTML/CSS; solo la foto es un avatar)
+const heroCards = [
+  d => `<div class="c-card c-lime" style="--d:${d}s"><div class="cc"><div class="cc-label">Conversaciones</div><div class="cc-metric">520k+</div><div class="cc-sub">este año</div></div></div>`,
+  d => `<div class="c-card" style="--d:${d}s"><div class="cc"><div class="cc-label">Ingresos</div><div class="cc-bars"><span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:85%"></span><span style="height:70%"></span></div></div></div>`,
+  d => `<div class="c-card c-glass" style="--d:${d}s"><div class="plus">+</div></div>`,
+  d => `<img class="c-card c-photo" style="--d:${d}s" src="https://i.pravatar.cc/260?img=32" alt="Cliente" loading="lazy" />`,
+  d => `<div class="c-card" style="--d:${d}s"><div class="cc"><div class="cc-label">Conversión</div><svg class="cc-line" width="100%" height="54" viewBox="0 0 104 54" preserveAspectRatio="none"><polyline points="0,44 20,38 38,42 56,22 74,28 104,8" fill="none" stroke="#1A7FE0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="cc-metric" style="font-size:20px">+38%</div></div></div>`,
+  d => `<div class="c-card c-black" style="--d:${d}s"><div class="cc"><div class="cc-label">Agente IA</div><div class="cc-txt" style="margin-top:auto">Vendiendo 24/7 por ti.</div></div></div>`,
+  d => `<div class="c-card" style="--d:${d}s"><div class="cc"><div class="cc-label">Cierre</div><div class="cc-donut"></div></div></div>`,
+  d => `<div class="c-card" style="--d:${d}s"><div class="cc"><div class="cc-label">Rating</div><div class="cc-metric">4.9★</div><div class="cc-sub">4,900+ clientes</div></div></div>`,
+  d => `<div class="c-card" style="--d:${d}s"><div class="cc"><div class="cc-label">Satisfacción</div><div class="cc-metric">98%</div><div class="cc-sub">renuevan</div></div></div>`,
 ];
+// Coloca cada tarjeta en un arco cilíndrico (rotateY/translateZ/scale progresivos)
+const heroArc = heroCards.map((card, i) => {
+  const d = i - (heroCards.length - 1) / 2;
+  const ad = Math.abs(d);
+  const t = `rotateY(${(-d * 10).toFixed(1)}deg) translateZ(${(-ad * 38).toFixed(0)}px) translateY(${(ad * 6).toFixed(0)}px) scale(${(1 - ad * 0.045).toFixed(3)})`;
+  return `<div class="c-slot" style="transform:${t}; z-index:${10 - Math.round(ad)}">${card((i * 0.35).toFixed(2))}</div>`;
+}).join('');
 
 // ---------- NAVBAR (rediseñado · sticky) ----------
 const navbar = `
@@ -67,6 +78,8 @@ const hero = `
           <a class="hero-cta-pri" href="#playground">Agenda una reunión <span class="arrow">↗</span></a>
         </div>
       </div>
+
+      <div class="hero-carousel">${heroArc}</div>
     </div>
   </header>`;
 

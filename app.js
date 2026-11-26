@@ -20,7 +20,7 @@ const heroCards = [
 const heroArc = heroCards.map((card, i) => {
   const d = i - (heroCards.length - 1) / 2;
   const ad = Math.abs(d);
-  const t = `rotateY(${(-d * 10).toFixed(1)}deg) translateZ(${(-ad * 38).toFixed(0)}px) translateY(${(ad * 6).toFixed(0)}px) scale(${(1 - ad * 0.045).toFixed(3)})`;
+  const t = `rotateY(${(-d * 10).toFixed(1)}deg) translateZ(${(-ad * 52).toFixed(0)}px) translateY(${(ad * 9).toFixed(0)}px) scale(${(1 - ad * 0.05).toFixed(3)})`;
   return `<div class="c-slot" style="transform:${t}; z-index:${10 - Math.round(ad)}">${card((i * 0.35).toFixed(2))}</div>`;
 }).join('');
 

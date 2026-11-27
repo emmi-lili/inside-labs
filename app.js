@@ -33,7 +33,7 @@ const navbar = `
           <div class="w-9 h-9 rounded-xl bg-brand-500 text-white flex items-center justify-center font-extrabold text-lg shadow-glow-sm group-hover:scale-105 transition-transform">D</div>
           <span class="font-extrabold text-lg tracking-tight text-brand-dark">Digital<span class="text-brand-500">Lab</span></span>
         </a>
-        <div class="hidden sm:flex items-center gap-2 pl-3 border-l border-brand-border/80 text-xs font-medium text-emerald-800 bg-brand-50 px-2.5 py-1 rounded-full">
+        <div class="hidden sm:flex items-center gap-2 pl-3 border-l border-brand-border/80 text-xs font-medium text-brand-700 bg-brand-50 px-2.5 py-1 rounded-full">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
@@ -144,7 +144,7 @@ const paradigm = `
         <div class="bg-gradient-to-b from-brand-50/70 to-white rounded-3xl p-8 border-2 border-brand-500/40 shadow-glow-sm flex flex-col justify-between relative overflow-hidden">
           <div class="absolute top-0 right-0 bg-brand-500 text-white text-[11px] font-extrabold uppercase px-4 py-1.5 rounded-bl-2xl shadow-sm tracking-wider">Recomendado</div>
           <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-brand-700 text-xs font-bold mb-6">✓ Nueva Era: Digital Lab AI Agents</div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold mb-6">✓ Nueva Era: Digital Lab AI Agents</div>
             <h3 class="text-xl font-bold text-gray-900 mb-3">La Web Cognitiva y Proactiva</h3>
             <p class="text-sm text-gray-600 mb-6 leading-relaxed">Cada visitante recibe una bienvenida adaptada a su nicho, una propuesta de valor precisa y la oportunidad de resolver objeciones en segundos.</p>
             <ul class="space-y-4 text-sm text-gray-700">
@@ -164,16 +164,16 @@ const marketplace = `
   <section class="py-24 bg-[#FAFCFA] border-b border-brand-border/60 relative overflow-hidden" id="marketplace">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center mb-16">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-brand-100 px-3.5 py-1 rounded-full border border-brand-200 inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-ping"></span>NOVEDAD // E-COMMERCE &amp; MARKETPLACE</span>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-700 bg-brand-100 px-3.5 py-1 rounded-full border border-brand-200 inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-ping"></span>NOVEDAD // E-COMMERCE &amp; MARKETPLACE</span>
         <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-dark mt-4 tracking-tight leading-tight">Vende todo en un solo lugar. <br class="hidden sm:inline"/><span class="text-brand-600">Tu Tienda Virtual a 1 solo Click.</span></h2>
         <p class="text-gray-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">Olvídate de configuraciones interminables. Sincroniza tus canales y publica tu tienda autónoma instantáneamente.</p>
       </div>
       <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-border/90 shadow-glass max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-gray-100 bg-gradient-to-br from-brand-50 to-emerald-50 p-8 relative min-h-[260px]">
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-gray-100 bg-gradient-to-br from-brand-50 to-brand-50 p-8 relative min-h-[260px]">
             <div class="absolute top-6 left-6 flex items-center gap-2 text-xs font-tech font-bold text-brand-700"><span class="w-2 h-2 rounded-full bg-brand-500"></span> store.digitallab.ai</div>
             <div class="grid grid-cols-3 gap-3 mt-12">
-              ${[1,2,3,4,5,6].map(() => `<div class="bg-white rounded-xl border border-gray-100 shadow-sm p-3"><div class="w-full h-12 rounded-lg bg-gradient-to-br from-brand-100 to-emerald-100 mb-2"></div><div class="h-2 w-3/4 bg-gray-200 rounded mb-1"></div><div class="h-2 w-1/2 bg-brand-200 rounded"></div></div>`).join('')}
+              ${[1,2,3,4,5,6].map(() => `<div class="bg-white rounded-xl border border-gray-100 shadow-sm p-3"><div class="w-full h-12 rounded-lg bg-gradient-to-br from-brand-100 to-brand-100 mb-2"></div><div class="h-2 w-3/4 bg-gray-200 rounded mb-1"></div><div class="h-2 w-1/2 bg-brand-200 rounded"></div></div>`).join('')}
             </div>
           </div>
           <div class="lg:col-span-5 space-y-6">
@@ -184,7 +184,7 @@ const marketplace = `
             </div>
             <div class="space-y-3">
               <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-brand-50/60 border border-brand-100"><div class="w-8 h-8 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold text-sm shadow-glow-sm shrink-0">⚡</div><div><div class="text-xs font-bold text-gray-900">1-Click Setup</div><div class="text-xs text-gray-500">Catálogo listo en segundos sin código</div></div></div>
-              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-gray-100 shadow-sm"><div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">🤖</div><div><div class="text-xs font-bold text-gray-900">Agente Vendedor Integrado 24/7</div><div class="text-xs text-gray-500">Resuelve dudas y recomienda variantes</div></div></div>
+              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-gray-100 shadow-sm"><div class="w-8 h-8 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm shrink-0">🤖</div><div><div class="text-xs font-bold text-gray-900">Agente Vendedor Integrado 24/7</div><div class="text-xs text-gray-500">Resuelve dudas y recomienda variantes</div></div></div>
               <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-gray-100 shadow-sm"><div class="w-8 h-8 rounded-xl bg-gray-100 text-gray-700 flex items-center justify-center font-bold text-sm shrink-0">🛒</div><div><div class="text-xs font-bold text-gray-900">Checkout Unificado y Omnicanal</div><div class="text-xs text-gray-500">Pagos en 1-click vía Stripe &amp; Apple Pay</div></div></div>
             </div>
           </div>
@@ -219,14 +219,14 @@ const squad = `
   <section class="py-24 bg-[#FAFCFA] relative" id="squad">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-brand-100 px-3.5 py-1 rounded-full border border-brand-200">Tu Fuerza de Ventas Sintética</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-700 bg-brand-100 px-3.5 py-1 rounded-full border border-brand-200">Tu Fuerza de Ventas Sintética</span>
         <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-dark mt-4 tracking-tight">Conoce al Squad Autónomo de Digital Lab</h2>
         <p class="text-gray-600 mt-4 text-base sm:text-lg">No un bot torpe de respuestas prefabricadas. Entrenamos modelos con tus casos de éxito, estructura de precios y argumentos de venta más persuasivos.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        ${agent('🏹','24/7 En Vivo','bg-emerald-50 text-emerald-700 border border-emerald-200','Agent Hunter','Detección &amp; Cualificación Activa','Monitorea el comportamiento de navegación para iniciar interacciones de altísima relevancia justo antes del abandono.',[['Especialidad:','Cualificación B2B'],['Tiempo de enganche:','Primeros 4 seg','text-brand-600']],'Precisión de scoring:','97.8%','text-emerald-800 bg-brand-50',false)}
+        ${agent('🏹','24/7 En Vivo','bg-brand-50 text-brand-700 border border-brand-200','Agent Hunter','Detección &amp; Cualificación Activa','Monitorea el comportamiento de navegación para iniciar interacciones de altísima relevancia justo antes del abandono.',[['Especialidad:','Cualificación B2B'],['Tiempo de enganche:','Primeros 4 seg','text-brand-600']],'Precisión de scoring:','97.8%','text-brand-700 bg-brand-50',false)}
         ${agent('⚡','Top Performer','bg-brand-500 text-white shadow-sm','Agent Closer','Derribo de Objeciones &amp; Cierre','Comprende dudas complejas sobre integraciones, seguridad o pricing, conectando con tu pasarela o calendario corporativo.',[['Especialidad:','Manejo de objeciones'],['Integraciones:','Stripe, Calendly, HubSpot','text-brand-600']],'Tasa de cierre en sesión:','+42% Boost','text-brand-700 bg-brand-100',true)}
-        ${agent('🔄','Omnicanal','bg-emerald-50 text-emerald-700 border border-emerald-200','Agent Retarget','Reactivación WhatsApp &amp; Email','Si el usuario abandona, redacta correos y mensajes de WhatsApp 100% personalizados según lo que estuvo consultando.',[['Canales activos:','WhatsApp, Email, LinkedIn'],['Personalización:','Hiper-contextual','text-brand-600']],'Apertura de reactivación:','68% Open Rate','text-emerald-800 bg-brand-50',false)}
+        ${agent('🔄','Omnicanal','bg-brand-50 text-brand-700 border border-brand-200','Agent Retarget','Reactivación WhatsApp &amp; Email','Si el usuario abandona, redacta correos y mensajes de WhatsApp 100% personalizados según lo que estuvo consultando.',[['Canales activos:','WhatsApp, Email, LinkedIn'],['Personalización:','Hiper-contextual','text-brand-600']],'Apertura de reactivación:','68% Open Rate','text-brand-700 bg-brand-50',false)}
       </div>
     </div>
   </section>`;
@@ -260,7 +260,7 @@ const playground = `
 // ---------- METRICS ----------
 const metric = (big, title, desc) => `
   <div class="bg-white rounded-3xl p-8 border border-brand-border text-center shadow-glass hover:-translate-y-1 transition-transform">
-    <div class="text-4xl sm:text-5xl font-black font-tech tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-500 mb-2">${big}</div>
+    <div class="text-4xl sm:text-5xl font-black font-tech tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-500 mb-2">${big}</div>
     <div class="text-sm font-bold text-gray-800 mb-1">${title}</div>
     <div class="text-xs text-gray-500">${desc}</div>
   </div>`;
@@ -285,12 +285,12 @@ const metrics = `
 // ---------- FINAL CTA ----------
 const ctaFinal = `
   <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-    <div class="relative rounded-3xl bg-gradient-to-br from-brand-100 via-emerald-50 to-brand-200/50 p-10 sm:p-16 border border-brand-300/80 shadow-glow-sm overflow-hidden text-center">
+    <div class="relative rounded-3xl bg-gradient-to-br from-brand-100 via-brand-50 to-brand-200/50 p-10 sm:p-16 border border-brand-300/80 shadow-glow-sm overflow-hidden text-center">
       <div class="absolute -right-20 -top-20 w-80 h-80 bg-brand-400/20 rounded-full blur-3xl pointer-events-none"></div>
       <div class="max-w-2xl mx-auto space-y-6 relative z-10">
         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-brand-500 text-brand-dark shadow-sm uppercase tracking-wider">Despliegue Listo en 48 Horas</span>
         <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">¿Listo para convertir cada visita en una conversación de valor?</h2>
-        <p class="text-base sm:text-lg text-emerald-950/80 font-normal">Configuramos tu sitio web autónomo, entrenamos los agentes de IA con tu conocimiento de producto y te entregamos la consola lista para cerrar ventas.</p>
+        <p class="text-base sm:text-lg text-brand-700/80 font-normal">Configuramos tu sitio web autónomo, entrenamos los agentes de IA con tu conocimiento de producto y te entregamos la consola lista para cerrar ventas.</p>
         <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a class="w-full sm:w-auto px-8 py-4 bg-brand-dark hover:bg-black text-white font-bold rounded-2xl shadow-xl transition-all transform hover:-translate-y-0.5 text-base flex items-center justify-center gap-2" href="#">
             <span>Lanzar mi primer Agente hoy</span>
@@ -343,7 +343,7 @@ const footer = `
             <li><a class="hover:text-brand-600 transition-colors" href="#">Privacidad RGPD</a></li>
             <li><a class="hover:text-brand-600 transition-colors" href="#">Términos de Servicio</a></li>
             <li><a class="hover:text-brand-600 transition-colors" href="#">Estado del Sistema</a></li>
-            <li><span class="inline-flex items-center gap-1.5 text-xs text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded">All Systems Normal</span></li>
+            <li><span class="inline-flex items-center gap-1.5 text-xs text-brand-600 font-bold bg-brand-50 px-2 py-0.5 rounded">All Systems Normal</span></li>
           </ul>
         </div>
       </div>

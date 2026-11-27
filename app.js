@@ -60,7 +60,10 @@ const hero = `
   <header class="hero" id="inicio">
     <div class="hero-card">
       <nav class="hero-nav">
-        <a class="hero-logo" href="#inicio"><span class="mark">D</span>DigitalLab</a>
+        <div class="hero-brand">
+          <a class="hero-logo" href="#inicio"><span class="mark">D</span>DigitalLab</a>
+          <span class="hero-live"><span class="pulse"></span>Engine v3.4 Live</span>
+        </div>
         <div class="hero-links">
           <a href="#comparativa">Paradigma</a>
           <a href="#squad">Agentes</a>

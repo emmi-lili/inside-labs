@@ -79,7 +79,7 @@ const hero = `
         <p class="hero-sub">Creamos tu página web y un agente de IA que conversa con cada visitante, entiende qué busca y lo acompaña hasta la venta.</p>
         <div class="hero-cta">
           <a class="hero-cta-sec" href="#comparativa">Ver cómo funciona</a>
-          <a class="hero-cta-pri" href="#playground">Agenda una reunión <span class="arrow">↗</span></a>
+          <a class="hero-cta-pri" href="#playground">Agenda una reunión <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
         </div>
       </div>
 

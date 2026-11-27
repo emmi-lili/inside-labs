@@ -74,6 +74,7 @@ const hero = `
       </nav>
 
       <div class="hero-center">
+        <span class="hero-eyebrow"><span class="dot"></span>Agentes de IA que venden por ti</span>
         <h1 class="hero-title">Conoce a tus<br><span class="l2">Clientes</span></h1>
         <p class="hero-sub">Creamos tu página web y un agente de IA que conversa con cada visitante, entiende qué busca y lo acompaña hasta la venta.</p>
         <div class="hero-cta">

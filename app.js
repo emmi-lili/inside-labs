@@ -260,7 +260,7 @@ const playground = `
 // ---------- METRICS ----------
 const metric = (big, title, desc) => `
   <div class="bg-white rounded-3xl p-8 border border-brand-border text-center shadow-glass hover:-translate-y-1 transition-transform">
-    <div class="text-4xl sm:text-5xl font-black font-tech tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-500 mb-2">${big}</div>
+    <div class="text-4xl sm:text-5xl font-black font-tech tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-brand-600 mb-2">${big}</div>
     <div class="text-sm font-bold text-gray-800 mb-1">${title}</div>
     <div class="text-xs text-gray-500">${desc}</div>
   </div>`;

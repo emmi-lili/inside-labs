@@ -81,16 +81,16 @@
   }
 
   .hero-card {
-    position: relative; width: 100%; min-height: 90vh; border-radius: 24px; overflow: hidden;
+    position: relative; isolation: isolate; width: 100%; min-height: 92vh; border-radius: 28px; overflow: hidden;
     display: flex; flex-direction: column; align-items: center;
-    padding: 20px clamp(16px, 4vw, 40px) 40px; color: #fff;
-    /* Fondo: overlay + foto de cielo (image.png) + degradado de fallback */
+    padding: 22px clamp(16px, 4vw, 44px) 42px; color: #fff;
+    /* Fondo: scrim superior para legibilidad + foto de cielo (image.png) + degradado de fallback */
     background-image:
-      linear-gradient(180deg, rgba(18,96,196,.45) 0%, rgba(90,174,242,.10) 55%, rgba(90,174,242,0) 78%),
+      linear-gradient(180deg, rgba(9,52,124,.62) 0%, rgba(20,100,192,.24) 26%, rgba(70,158,238,.03) 48%, rgba(70,158,238,.12) 100%),
       url('public/reference/image.png'),
-      linear-gradient(180deg, #1A7FE0 0%, #5AAEF2 100%);
+      linear-gradient(180deg, #1A7FE0 0%, #3E97EC 55%, #6FB7F4 100%);
     background-size: cover, cover, cover;
-    background-position: center, center bottom, center;
+    background-position: center top, center bottom, center;
     background-repeat: no-repeat;
   }
 

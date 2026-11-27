@@ -47,7 +47,7 @@ const navbar = `
         <a class="hover:text-brand-600 transition-colors" href="#playground">Playground</a>
         <a class="hover:text-brand-600 transition-colors" href="#resultados">Resultados</a>
       </div>
-      <a class="relative group inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-bold tracking-wide text-brand-dark bg-brand-500 hover:bg-[#00e377] rounded-full transition-all duration-300 shadow-glow-sm hover:shadow-glow-lg active:scale-95" href="#playground">
+      <a class="relative group inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-bold tracking-wide text-brand-dark bg-brand-500 hover:bg-[#e2fa82] rounded-full transition-all duration-300 shadow-glow-sm hover:shadow-glow-lg active:scale-95" href="#playground">
         <span>Activar Agente Demo</span>
         <svg class="w-4 h-4 ml-1.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
       </a>

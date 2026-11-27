@@ -138,11 +138,14 @@
   .hero-carousel { margin-top: 30px; width: 100%; max-width: 1100px; perspective: 1150px; display: flex; justify-content: center; align-items: center; }
   .c-slot { flex: 0 0 auto; margin: 0 -5px; transform-style: preserve-3d; }
   .c-card {
-    width: 128px; height: 168px; border-radius: 14px; overflow: hidden; background: #fff;
-    box-shadow: 0 18px 40px rgba(10,30,60,.30); border: 1px solid rgba(255,255,255,.4);
+    position: relative; width: 132px; height: 174px; border-radius: 16px; overflow: hidden; background: #fff;
+    box-shadow: 0 2px 4px rgba(10,30,60,.10), 0 24px 48px -14px rgba(8,28,66,.5); border: 1px solid rgba(255,255,255,.6);
     animation: cfloat 5.5s ease-in-out infinite; animation-delay: var(--d, 0s);
     display: flex; flex-direction: column;
   }
+  /* brillo superior sutil en cada tarjeta */
+  .c-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0) 32%); }
+  .c-card.c-photo::after, .c-card.c-black::after { display: none; }
   @keyframes cfloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
 
   /* contenidos de tarjeta (placeholders) */

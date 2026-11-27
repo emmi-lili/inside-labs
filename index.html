@@ -169,10 +169,14 @@
   .cc-donut { margin: auto; width: 60px; height: 60px; border-radius: 50%; background: conic-gradient(#1A7FE0 0 68%, #e3ecf7 0 100%); display: flex; align-items: center; justify-content: center; }
   .cc-donut::after { content: '68%'; width: 38px; height: 38px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #10213a; }
 
-  /* --- Rating --- */
-  .hero-rating { margin-top: 26px; text-align: center; }
-  .hero-rating .rtext { font-size: 12px; letter-spacing: .05em; color: rgba(255,255,255,.9); }
-  .hero-rating .stars { margin-top: 6px; color: #D9F75C; font-size: 15px; letter-spacing: 3px; }
+  /* --- Rating (con stack de avatares) --- */
+  .hero-rating { margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 9px; }
+  .hero-rating .rrow { display: flex; align-items: center; gap: 12px; }
+  .hero-avatars { display: flex; }
+  .hero-avatars img { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; object-fit: cover; margin-left: -9px; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+  .hero-avatars img:first-child { margin-left: 0; }
+  .hero-rating .stars { color: #D9F75C; font-size: 15px; letter-spacing: 3px; }
+  .hero-rating .rtext { font-size: 12px; letter-spacing: .04em; color: rgba(255,255,255,.92); }
 
   @media (prefers-reduced-motion: reduce) {
     .c-card { animation: none; }

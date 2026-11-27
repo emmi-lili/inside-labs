@@ -86,9 +86,17 @@ const hero = `
       <div class="hero-carousel">${heroArc}</div>
 
       <div class="hero-rating">
-        <!-- PLACEHOLDER rating: edita texto y nº de estrellas aquí -->
+        <!-- PLACEHOLDER rating: edita texto, avatares y nº de estrellas aquí -->
+        <div class="rrow">
+          <div class="hero-avatars">
+            <img src="https://i.pravatar.cc/60?img=12" alt="" loading="lazy" />
+            <img src="https://i.pravatar.cc/60?img=45" alt="" loading="lazy" />
+            <img src="https://i.pravatar.cc/60?img=5" alt="" loading="lazy" />
+            <img src="https://i.pravatar.cc/60?img=32" alt="" loading="lazy" />
+          </div>
+          <div class="stars">★★★★★</div>
+        </div>
         <div class="rtext">Rated 4.9/5 by 4,900+ clients</div>
-        <div class="stars">★★★★★</div>
       </div>
     </div>
   </header>`;
